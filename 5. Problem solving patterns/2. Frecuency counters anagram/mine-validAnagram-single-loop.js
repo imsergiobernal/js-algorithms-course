@@ -10,22 +10,19 @@ function validAnagram(word, anagram) {
 
   if (word.length !== anagram.length) return false 
 
-  const value = {
-    word: 0,
-    anagram: 0
-  }
+  const frequencies = {}
 
   for (let i = 0; i <= word.length -1; i++) {
-    let charValue = word.charCodeAt(i)
-    value.word += charValue
+    let char = word.charAt(i)
+    if (!frequencies[char]) frequencies[char] = 0
+    frequencies[char] += 1
   }
 
   for (let i = 0; i <= anagram.length -1; i++) {
-    let charValue = anagram.charCodeAt(i)
-    value.anagram += charValue
+    let anagramChar = anagram.charAt(i)
+    if (!frequencies[anagramChar]) return false
+    frequencies[anagramChar] -= 1
   }
-
-  if (value.word !== value.anagram) return false
 
   return true
 }
