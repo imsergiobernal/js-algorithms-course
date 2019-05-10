@@ -1,3 +1,5 @@
+const shortedArrayGenerator = require('./shortedArrayGenerator').shortedArrayGenerator;
+
 /**
  * Find the first pair of numbers that sum equals zero, in a shorted array
  * @param {number[]} array Shorted array of numbers
@@ -20,4 +22,5 @@ const sumZero = (array) => {
     }
 }
 
-console.log(sumZero([-6,-5,-3,-1, 0, 2, 3, 4, 5, 7]));
+const array = shortedArrayGenerator(50);
+console.log(sumZero(array));
