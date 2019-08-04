@@ -1,0 +1,22 @@
+{
+  "name": "js-algorithms-course",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imsergiobernal/js-algorithms-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imsergiobernal/js-algorithms-course/issues"
+  },
+  "homepage": "https://github.com/imsergiobernal/js-algorithms-course#readme",
+  "dependencies": {
+    "jest": "^24.8.0"
+  }
+}
