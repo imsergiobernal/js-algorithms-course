@@ -5,8 +5,11 @@
  */
 function bubbleSort(array) {
     let result = Array.from(array);
+    let hasSwap = false;
 
     for (let iteration = result.length - 1; iteration >= 0; iteration--) {
+        hasSwap = false;
+
         for (let i = 0; i < iteration; i++) {
             const [first, second] = [result[i], result[i + 1]];
 
@@ -14,8 +17,11 @@ function bubbleSort(array) {
                 const [higher, lower] = [first, second]; 
                 result[i + 1] = higher;
                 result[i] = lower;
+                hasSwap = true;
             }
         }
+
+        if (!hasSwap) break;
     }
 
     return result;
