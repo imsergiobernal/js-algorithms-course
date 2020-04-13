@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "npx jest"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,14 @@
     "jest": "^24.8.0"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.17"
+    "@types/jest": "^24.0.17",
+    "jest-cucumber": "^2.0.11"
+  },
+  "jest": {
+    "verbose": true,
+    "testMatch": [
+      "**/*.steps.js",
+      "**/*.spec.js"
+    ]
   }
 }
